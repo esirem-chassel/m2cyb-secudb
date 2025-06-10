@@ -40,6 +40,8 @@ Que constatez-vous ?
 > - `USAGE` signifie "aucun droit"
 > - `ALL` ou `ALL PRIVILEGES` signifie "tous les droits"
 
+### Sélection / visualisation
+
 Nous allons ajouter le droit d'accès (`SELECT`) à la base et à votre table en particulier.
 
 Testez votre modification, puis listez vos tables. Que constatez-vous ?
@@ -47,5 +49,17 @@ Testez votre modification, puis listez vos tables. Que constatez-vous ?
 > [!NOTE]
 > Il est possible que vous ayiez besoin de "forcer" MySQL à rafraîchir son cache de permissions via `flush privileges`.
 
+Tentez d'effectuer une insertion dans votre table, afin de vérifier l'application des droits d'accès.
 
+### Droits cumulatifs
 
+Ajoutez un droit intégral à l'user sur votre table, puis révoquez le droit de suppression.
+Testez les différentes opérations d'insertion, mise à jour et suppression.
+
+Testez de vidanger la table via truncate : que constatez-vous ?
+
+Tentez de vindanger une autre table via truncate : quel est le message d'erreur ? Qu'en déduisez-vous ?
+
+Quelle serait la commande pour restreindre / autoriser un truncate ?
+
+Quels sont les dangers d'un privilège ALL sur une simple base de données ?
