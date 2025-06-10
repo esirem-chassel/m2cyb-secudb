@@ -26,7 +26,7 @@ Que constatez-vous ?
 ## Rôles
 
 > [!IMPORTANT]
-> La syntaxe de `GRANT` est la suivante : `GRANT <perms> ON "<db>"."<table>" TO '<usr>'@'<host>`.
+> La syntaxe de `GRANT` est la suivante : `GRANT <perms> ON "<db>"."<table>" TO '<usr>'@'<host>'`.
 > Dans cette liste :
 > - `perms` est une des permissions SQL
 > - `db` la base de données, on peut utiliser *
