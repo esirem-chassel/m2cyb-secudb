@@ -63,3 +63,55 @@ Tentez de vindanger une autre table via truncate : quel est le message d'erreur 
 Quelle serait la commande pour restreindre / autoriser un truncate ?
 
 Quels sont les dangers d'un privilège ALL sur une simple base de données ?
+
+# Activité
+
+## Contexte
+
+L'objectif est de mettre en place une API SQL de photographies et commentaires.
+
+## Définition
+
+Deux tables :
+- pictures, contenant les références aux photographies
+  - un titre
+  - une URI
+  - l'utilisateur l'ayant envoyé
+- comments, contenant les commentaires
+  - le contenu
+  - la référence vers la photographie
+  - l'utilisateur l'ayant envoyé
+
+On gère les droits selon divers privilèges :
+- les administrateurs ont tous les droits sur toutes les tables
+- les artistes peuvent ajouter des photographies
+- les modérateurs peuvent supprimer des commentaires
+- les utilisateurs peuvent ajouter des commentaires
+- tous les rôles peuvent sélectionner toutes les tables
+
+## Création
+
+Réalisez les requêtes de création des __rôles__ `admins`, `artists`, `mods` et `std`
+
+## Tests de base
+
+Testez vos différentes rôles en créant des utilisateurs SQL rattachés à chaque rôle. Pour remplir le champ `user`, il existe une fonction MySQL/MariaDB : `user()`.
+
+Que remarquez-vous concernant ce champ ?
+
+## Procédures stockées
+
+Nous allons ajouter des procédures stockées pour gérer les différentes possibilités et simplifier certains éléments.
+
+Quelques liens utiles :
+- [Procédures stockées (création)](https://mariadb.com/docs/server/server-usage/stored-routines/stored-procedures/create-procedure)
+- [Sécurité et procédures stockées](https://mariadb.com/docs/server/server-usage/stored-routines/stored-functions/stored-routine-privileges)
+
+Créez la procédure stockée `addPicture`, qui permettra d'ajouter une photographie.
+Cette procédure prendra en paramètre une URI et un titre et s'occupera de remplir l'utilisateur SQL ayant ajouté la photographie.
+
+### Sécurité
+
+En jouant sur le paramètre SECURITY lors de la création de la procédure stockée, comment pourriez-vous vous assurer que les artistes puissent uniquement créer des photographies avec leur nom d'utilisateur ? Quelles possibilités cela ouvre-t-il concernant les rôles et procédures ?
+
+Réalisez le reste des procédures pour permettre l'ajout de commentaires, ainsi que la création automatisée d'utilisateurs.
