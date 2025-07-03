@@ -23,7 +23,7 @@ Tentez la connexion à la base `<db>` via cet utilisateur. Listez vos bases de d
 
 Que constatez-vous ?
 
-## Rôles
+## Permissions
 
 > [!IMPORTANT]
 > La syntaxe de `GRANT` est la suivante : `GRANT <perms> ON "<db>"."<table>" TO '<usr>'@'<host>'`.
@@ -63,6 +63,14 @@ Tentez de vindanger une autre table via truncate : quel est le message d'erreur 
 Quelle serait la commande pour restreindre / autoriser un truncate ?
 
 Quels sont les dangers d'un privilège ALL sur une simple base de données ?
+
+## Rôles
+
+Les [rôles](https://mariadb.com/docs/server/security/user-account-management/roles/roles_overview) sont des regroupements de permissions, qui peuvent être appliquées pour des utilisateurs.
+
+Ils sont factuellement gérés comme des utilisateurs virtuels regroupant zéro à plusieurs utilisateurs.
+
+La syntaxe de CREATE ROLE est décrite dans la [documentation](https://mariadb.com/docs/server/reference/sql-statements/account-management-sql-statements/create-role).
 
 # Activité
 
