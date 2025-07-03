@@ -126,4 +126,4 @@ Réalisez le reste des procédures pour permettre l'ajout de commentaires, ainsi
 
 ### Vues et déclencheurs
 
-Sur le même principe, analysez la manière dont les vues (views) et déclencheurs (triggers) gèrent la sécurité. Quels sont les risques qui en découlent ?
+Sur le même principe, analysez la manière dont les [vues (views)](https://mariadb.com/docs/server/server-usage/views) et [déclencheurs (triggers)](https://mariadb.com/docs/server/server-usage/triggers-events/triggers/trigger-overview) gèrent la sécurité. Quels sont les risques qui en découlent ?
