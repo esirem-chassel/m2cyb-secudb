@@ -115,3 +115,7 @@ Cette procédure prendra en paramètre une URI et un titre et s'occupera de remp
 En jouant sur le paramètre SECURITY lors de la création de la procédure stockée, comment pourriez-vous vous assurer que les artistes puissent uniquement créer des photographies avec leur nom d'utilisateur ? Quelles possibilités cela ouvre-t-il concernant les rôles et procédures ?
 
 Réalisez le reste des procédures pour permettre l'ajout de commentaires, ainsi que la création automatisée d'utilisateurs.
+
+### Vues et déclencheurs
+
+Sur le même principe, analysez la manière dont les vues (views) et déclencheurs (triggers) gèrent la sécurité. Quels sont les risques qui en découlent ?
