@@ -56,13 +56,13 @@ Tentez d'effectuer une insertion dans votre table, afin de vérifier l'applicati
 Ajoutez un droit intégral à l'user sur votre table, puis révoquez le droit de suppression.
 Testez les différentes opérations d'insertion, mise à jour et suppression.
 
-Testez de vidanger la table via truncate : que constatez-vous ?
+Testez de vidanger la table via `truncate` : que constatez-vous ?
 
-Tentez de vindanger une autre table via truncate : quel est le message d'erreur ? Qu'en déduisez-vous ?
+Tentez de vidanger une autre table via `truncate` : quel est le message d'erreur ? Qu'en déduisez-vous ?
 
-Quelle serait la commande pour restreindre / autoriser un truncate ?
+Quelle serait la commande pour restreindre / autoriser un `truncate` ?
 
-Quels sont les dangers d'un privilège ALL sur une simple base de données ?
+Quels sont les dangers d'un privilège `ALL` sur une simple base de données ?
 
 ## Rôles
 
